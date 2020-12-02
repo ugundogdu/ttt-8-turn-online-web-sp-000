@@ -14,12 +14,8 @@ def move(index, current_player = "X")
   @board[index] = current_player
 end
 
-def valid_move?(board, index)
-  if !position_taken?(board, index) && (index).between?(0,8)
-    return true
-  else
-    return false
-  end
+def valid_move?(board, input)
+  input.to_i.between?(1,9) && !position_taken?(board, input.to_i-1)
 end
 
 def input_to_index(user_input)
