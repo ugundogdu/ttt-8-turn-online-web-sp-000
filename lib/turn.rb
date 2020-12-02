@@ -24,12 +24,6 @@ def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
   move(board, index, first_player = "X")
-  if valid_move?(index)
-    move(index, player)
-    display_board
-  else
-    turn
-  end
 end
 
 def position_taken?(board, index)
