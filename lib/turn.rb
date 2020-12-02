@@ -31,8 +31,3 @@ def turn(board)
     turn(board)
   end
 end
-
-def current_player(9)
-  if true
-    return 9
-  end
