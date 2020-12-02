@@ -22,6 +22,8 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
   index = input_to_index(user_input)
+  if user_input.between(1-9)
+    return board
 end
 
 def position_taken?(board, index)
