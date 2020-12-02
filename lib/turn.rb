@@ -36,5 +36,5 @@ def move(index, current_player = "X")
 end
 
 def current_player(board)
-  turn_count(board).even? ? 'X' : 'O'
+  turn_9(board).even? ? 'X'
 end
