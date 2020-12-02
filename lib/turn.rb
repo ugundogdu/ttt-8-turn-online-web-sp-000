@@ -10,6 +10,10 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+def move(index, current_player = "X")
+  @board[index] = current_player
+end
+
 def valid_move?(board, index)
   if !position_taken?(board, index) && (index).between?(0,8)
     return true
