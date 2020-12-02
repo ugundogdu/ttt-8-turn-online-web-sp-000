@@ -28,7 +28,6 @@ def turn(board)
       move(board, index, current_player(board))
     end
   display_board(board)
-end
 
 def position_taken?(board, index)
   if board[index] == "X" || board[index] == "O"
