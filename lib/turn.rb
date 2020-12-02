@@ -9,19 +9,3 @@ def display_board(board)
   puts "-----------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
-
-def input_to_index(user_input)
-  user_input.to_i - 1
-end
-
-def move(index, current_player = "X")
-  @board[index] = current_player
-end
-
-def position_taken?(index)
-  !(@board[index].nil? || @board[index] == " ")
-end
-
-def valid_move?(index)
-  index.between?(0,8) && !position_taken?(index)
-end
