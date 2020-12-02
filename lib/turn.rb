@@ -19,11 +19,17 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def turn(board)
-  puts "Please enter 1-9:"
-  user_input = gets.strip
+def turn
+  puts "Please choose a number 1-9:"
+  user_input = gets.chomp
   index = input_to_index(user_input)
-  move(board, index, first_player = "X")
+  if valid_move?(index)
+    player_token = current_player
+    move(index, player_token)
+    display_board
+  else
+    turn
+  end
 end
 
 def position_taken?(board, index)
