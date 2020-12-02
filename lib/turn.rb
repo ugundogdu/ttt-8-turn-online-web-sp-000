@@ -34,7 +34,3 @@ end
 def move(index, current_player = "X")
   @board[index] = current_player
 end
-
-def current_player(board)
-  turn_9(board).even? ? 'X'
-end
