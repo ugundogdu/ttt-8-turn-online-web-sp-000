@@ -20,14 +20,8 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-    userInput = gets.strip # gets the user input and calls input_to_index
-    index = input_to_index(userInput)
-    if !valid_move?(board, index) # asks for input again after a failed validation
-      turn(board)
-    else # makes valid moves
-      move(board, index, current_player(board))
-    end
-  display_board(board)
+  user_input = gets.strip
+  index = input_to_index(user_input)
 end
 
 def position_taken?(board, index)
